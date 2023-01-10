@@ -69,6 +69,7 @@ img {
 
 .provider {
   display: flex;
+  text-align: center;
 }
 
 .provider img {
@@ -112,16 +113,31 @@ img {
 .back {
   opacity: 0;
   position: relative;
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
 }
 
+.back .provider {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.back .single-provider {
+  font-size: 0.9rem;
+  padding-top: 7px;
+}
+
+.back .name {
+  font-weight: bold;
+}
+
 .article__background {
+  max-height: 270px;
   background: #234;
   position: absolute;
   top: 0;
@@ -129,7 +145,6 @@ img {
   bottom: 0;
   right: 0;
   z-index: -10;
-  transform: scale(0.2, 0.9);
   transition: 250ms;
   border-radius: var(--br);
   opacity: 0;
@@ -153,7 +168,7 @@ img {
 }
 
 .article:hover .rank {
-  transform: translate(150%, -85%);
+  transform: translate(150%, -65%);
 }
 
 .article:hover .back {
